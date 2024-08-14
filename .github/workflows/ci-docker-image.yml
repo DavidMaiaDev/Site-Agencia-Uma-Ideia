@@ -1,0 +1,43 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build -t daviddevlinux/agenciaumaideia:latest
+      
+    - name: Push the Docker image
+      run: docker push daviddevlinux/agenciaumaideia:latest
+
+  deploy:
+     
+    runs-on: self-hosted
+    needs: build
+    steps:
+      - name: Remove existing containers
+        run: |
+          if [ "$(docker ps -aq)" ]; then
+            docker rm $(docker ps -aq) --force
+          else
+            echo "No containers to remove."
+          fi
+
+      - name: Run Docker Container
+        run: docker run -dti --name web-server -p 80:80 daviddevlinux/agenciaumaideia:latest
+
+      - name: Cleanup Docker
+        run: docker system prune --force
+    
+
+
