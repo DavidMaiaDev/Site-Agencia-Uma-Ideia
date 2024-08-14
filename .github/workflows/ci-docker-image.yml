@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build -t daviddevlinux/agenciaumaideia:latest
+      run: docker build -t daviddevlinux/agenciaumaideia:latest .
       
     #- name: Push the Docker image
       #run: docker push daviddevlinux/agenciaumaideia:latest
