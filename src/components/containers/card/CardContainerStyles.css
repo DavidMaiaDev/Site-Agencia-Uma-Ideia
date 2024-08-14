@@ -1,0 +1,43 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 3rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.background-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.background-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.5px);
+    height: 350px;
+}
+
+.background-shape .shape-fill {
+    fill: var(--secondary-color);
+}
+
+@media screen and (max-width: 1050px) {
+    .card-container {
+        gap: 0.5rem;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .background-shape svg {
+        height: 400px;
+    }
+}

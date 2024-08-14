@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Home",
+        "url": "/",
+        "icon": "fa-solid fa-house-user"
+    },
+    {
+        "title": "Sobre",
+        "url": "/sobre",
+        "icon": "fa-solid fa-circle-info"
+    },
+    {
+        "title": "Serviços",
+        "url": "/servicos",
+        "icon": "fa-solid fa-briefcase"
+    },
+    {
+        "title": "Contato",
+        "url": "/contato",
+        "icon": "fa-solid fa-address-book"
+    }
+]

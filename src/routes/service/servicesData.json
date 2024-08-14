@@ -1,0 +1,36 @@
+[
+    {
+      "iconClass": "fa-solid fa-camera",
+      "title": "Fotografia",
+      "services": [
+        "Casamentos",
+        "Eventos",
+        "Aniversários",
+        "Batizados",
+        "Ensaio no estúdio",
+        "Ensaio em ambientes externos"
+      ]
+    },
+    {
+      "iconClass": "fa-solid fa-video",
+      "title": "Audiovisual",
+      "services": [
+        "Gravação de eventos",
+        "Filmagem de casamento",
+        "Vídeos de aniversários",
+        "Gravação de batizados",
+        "Filmagem no estúdio",
+        "Filmagem em ambientes externos"
+      ]
+    },
+    {
+      "iconClass": "fa-solid fa-wand-magic-sparkles",
+      "title": "Design Gráfico",
+      "services": [
+        "Peças de artes gráficas",
+        "Identidade visual",
+        "Gerenciamento de perfil do Instagram"
+      ]
+    }
+  ]
+  

@@ -1,0 +1,68 @@
+.contact {
+    display: flex;
+    padding: 4rem 10rem;
+    align-items: start;
+    justify-content: center;
+    gap: 3rem;
+    position: relative;
+}
+
+.contact h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.contact-info div {
+    margin: 2rem 0;
+}
+
+.contact-info h3 {
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.contact-info i {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+.social-networks> :nth-child(n+3){
+    margin-left: 1rem;
+}
+
+.social-networks i {
+    font-size: 1.8rem;
+    padding: 0 1px;
+    border-radius: 6px;
+}
+
+.social-networks i:hover {
+    color: var(--secondary-color);
+}
+
+.contact-map {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 3rem;
+}
+
+.contact-map h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-map iframe {
+    width: 600px;
+    height: 450px;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 1250px) {
+    .contact-map {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .contact {
+        padding: 2rem;
+    }
+}

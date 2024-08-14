@@ -1,0 +1,108 @@
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+}
+
+.navbar-logo {
+    display: flex;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+.navbar-logo img {
+    min-width: 50px;
+    height: auto;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: var(--primary-font-color);
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.nav-links:hover {
+    color: var(--tertiary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--tertiary-color);
+    transition: width 0.3s ease;
+}
+
+.nav-links:hover::before {
+    width: 100%;
+}
+
+.mobile-menu-icons {
+    display: none;
+}
+
+@media screen and (max-width: 650px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--secondary-color);
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        top: -100%;
+        left: 0;
+        gap: 1rem;
+        padding: 2rem 0;
+        padding: 5rem 0 1.5rem;
+        transition: 0.6s;
+        z-index: -1;
+    }
+
+    .nav-menu.active {
+        top: 0;
+        opacity: 1;
+        z-index: 1;
+        transition: 0.5s;
+    }
+
+    .nav-links {
+        display: flex;
+        padding: 1rem 0;
+    }
+
+    .mobile-menu-icons {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--primary-font-color);
+        z-index: 2;
+    }
+
+    .navbar-logo img{
+        z-index: 2;
+    }
+}

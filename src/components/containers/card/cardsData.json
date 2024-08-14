@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Design Gráfico",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "icon": "fa-solid fa-wand-magic-sparkles"
+    },
+    {
+        "title": "Fotografia",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "icon": "fa-solid fa-camera"
+    },
+    {
+        "title": "Audiovisual",
+        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "icon": "fa-solid fa-video"
+    }
+]
