@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: sudo docker build -t daviddevlinux/agenciaumaideia:latest .
+      run: docker build -t daviddevlinux/agenciaumaideia:latest .
       
     #- name: Push the Docker image
       #run: docker push daviddevlinux/agenciaumaideia:latest
@@ -28,16 +28,16 @@ jobs:
       - name: Remove existing containers
         run: |
           if [ "$(docker ps -aq)" ]; then
-           sudo docker rm $(docker ps -aq) --force
+           docker rm $(docker ps -aq) --force
           else
             echo "No containers to remove."
           fi
 
       - name: Run Docker Container
-        run: sudo docker run -dti --name web-server -p 80:80 daviddevlinux/agenciaumaideia:latest
+        run: docker run -dti --name web-server -p 80:80 daviddevlinux/agenciaumaideia:latest
 
       - name: Cleanup Docker
-        run: sudo docker system prune --force
+        run: docker system prune --force
     
 
 
